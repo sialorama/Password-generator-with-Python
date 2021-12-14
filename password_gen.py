@@ -2,26 +2,26 @@ import string
 import random
 
 
-## characters to generate password from
+## Les caractères utilisés pour générer le mot de passe
 characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
 
 def generate_random_password():
-	## length of password from the user
-	length = int(input("Enter password length: "))
+	## la taille du mot de passe choisie
+	length = int(input("Entrez la taille du mot de passe désirée: "))
 
-	## shuffling the characters
+	## Mélange aléatoire des caractères
 	random.shuffle(characters)
 	
-	## picking random characters from the list
+	## Choix aléatoire des caractères à partir de la liste
 	password = []
 	for i in range(length):
 		password.append(random.choice(characters))
 
-	## shuffling the resultant password
+	## Mélange aléatoire de la liste obtenue
 	random.shuffle(password)
 
-	## converting the list to string
-	## printing the list
+	## convertion de la liste de caractère obtenue après mèlange en une chaine de caractère
+	## impression de cette liste
 	print("".join(password))
 
 
