@@ -26,5 +26,5 @@ def generate_random_password():
 
 
 
-## invoking the function
+## Execution de la fonction
 generate_random_password()
